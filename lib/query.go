@@ -156,6 +156,14 @@ func query2String(options *QueryOptions) string {
 		if options.EventType != nil {
 			query = fmt.Sprintf("%s%seventType=%s", query, sep, *options.EventType)
 		}
+
+		if options.StartDate != nil {
+			query = fmt.Sprintf("%s%sstartDate=%s", query, sep, *options.StartDate)
+		}
+
+		if options.EndDate != nil {
+			query = fmt.Sprintf("%s%sendDate=%s", query, sep, *options.EndDate)
+		}
 	}
 	return query
 }
