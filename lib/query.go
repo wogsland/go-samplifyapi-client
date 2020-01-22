@@ -107,6 +107,8 @@ type QueryOptions struct {
 	ExtProjectId  *string
 	ExtLineItemId *string
 	EventType     *string `conform:"trim"`
+	StartDate     *string
+	EndDate       *string
 }
 
 func query2String(options *QueryOptions) string {
