@@ -10,6 +10,11 @@ const (
 	StatusTypeUnknown StatusType = "unknown"
 )
 
+// InvoicesSummaryResponse ...
+type GetInvoicesSummaryResponse struct {
+
+}
+
 // ProjectResponse ...
 type ProjectResponse struct {
 	Project        *Project       `json:"data"`

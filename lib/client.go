@@ -388,6 +388,15 @@ func (c *Client) Logout() error {
 	return err
 }
 
+// GetInvoicesSummary ...
+func (c *Client) GetInvoicesSummary(options *QueryOptions) (*GetInvoicesSummaryResponse, error)  {
+	res := &GetInvoicesSummaryResponse{}
+	query := query2String(options)
+	path := fmt.Sprintf("/projects/invoices/summary%s", query)
+	err := c.requestAndParseResponse("GET", path, nil, res)
+	return res, err
+}
+
 // GetAuth ...
 func (c *Client) GetAuth() (TokenResponse, error) {
 	err := c.requestAndParseToken()
